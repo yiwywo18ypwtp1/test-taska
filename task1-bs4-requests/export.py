@@ -2,8 +2,8 @@ import json
 from openpyxl import load_workbook
 
 TEMPLATE_PATH = "template.xlsx"
-EXCEL_OUTPUT_PATH = "export/product_details.xlsx"
-JSON_OUTPUT_PATH = "export/product_details.json"
+EXCEL_OUTPUT_PATH = "result/product_details.xlsx"
+JSON_OUTPUT_PATH = "result/product_details.json"
 
 
 def save_to_excel(data):
