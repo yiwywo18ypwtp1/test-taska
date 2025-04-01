@@ -1,3 +1,4 @@
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -20,10 +21,10 @@ def get_specs(driver):
         for item in items:
             try:
                 # Извлекаем название характеристики (XPath)
-                title = item.find_element(By.XPATH, ".//*[contains(@class, 'label')]//span").text.strip()
+                title = item.find_element(By.XPATH, ".//*[contains(@class, 'label')]//span").text
 
                 # Извлекаем значение (XPath)
-                value = item.find_element(By.XPATH, ".//*[contains(@class, 'value')]").text.strip()
+                value = item.find_element(By.XPATH, ".//*[contains(@class, 'value')]").text
 
                 # Добавляем в словарь
                 item_characteristics[title] = value

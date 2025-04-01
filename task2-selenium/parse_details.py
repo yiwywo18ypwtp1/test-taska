@@ -72,8 +72,8 @@ def get_details(driver):
         display_res = None
 
     # характеристики
-    # _driver = driver.get(driver)
-    # item_specs = get_specs(_driver)
+    driver.get('https://rozetka.com.ua/ua/apple-iphone-15-128gb-black/p395460480/characteristics/')
+    item_specs = get_specs(driver)
 
     return {
         'title': title,
@@ -85,5 +85,5 @@ def get_details(driver):
         'images': images,
         'serial': serial,
         'display_resolution': display_res,
-        # 'item_specs': item_specs
+        'item_specs': item_specs
     }
